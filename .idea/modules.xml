@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Easier Student Life.iml" filepath="$PROJECT_DIR$/Easier Student Life.iml" group="Easier Student Life" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Easier Student Life/app" />
+    </modules>
+  </component>
+</project>
