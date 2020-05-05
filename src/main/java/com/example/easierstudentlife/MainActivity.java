@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import id.co.jeteas.easierstudentlife.R;
+import com.example.progtech.easierstudentlife.R;
 
 public class MainActivity extends AppCompatActivity {
 

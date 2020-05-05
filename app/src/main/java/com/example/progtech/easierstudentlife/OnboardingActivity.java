@@ -1,4 +1,4 @@
-package id.co.jeteas.easierstudentlife;
+package com.example.progtech.easierstudentlife;
 
 import android.content.Intent;
 import android.os.Bundle;
