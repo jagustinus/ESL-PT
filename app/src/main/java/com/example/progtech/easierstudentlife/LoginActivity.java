@@ -1,10 +1,10 @@
-package id.co.jeteas.easierstudentlife;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.progtech.easierstudentlife;
 
 import android.os.Bundle;
 
-public class login extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
