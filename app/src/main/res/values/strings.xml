@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Easier Student Life</string>
+    <string name="tunggu_apa_lagi_buruan_masuk">Tunggu apa lagi? buruan masuk!</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="belum_punya_akun_yuk_daftar_dulu">Belum punya akun? Yuk daftar dulu!</string>
+    <string name="saya_setuju_dengan_syarat_ketentuan_yang_berlaku"><![CDATA[Saya setuju dengan syarat & ketentuan yang berlaku.]]></string>
+    <string name="lupa_password">Lupa password?</string>
+    <string name="password">Password</string>
 </resources>
