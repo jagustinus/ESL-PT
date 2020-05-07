@@ -1,4 +1,4 @@
-package com.example.progtech.easierstudentlife.onboarding;
+package id.co.jeteas.easierstudentlife.onboarding;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.progtech.easierstudentlife.R;
-
 import java.util.List;
+
+import id.co.jeteas.easierstudentlife.R;
 
 public class OnboardingViewPagerAdapter extends PagerAdapter {
     Context mContext;
