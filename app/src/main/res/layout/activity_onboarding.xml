@@ -38,8 +38,8 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/onboarding_btn_next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:tabBackground="@drawable/indicator_selector">
+        app:layout_constraintStart_toStartOf="parent">
+<!--        app:tabBackground="@drawable/indicator_selector">-->
 
 
     </com.google.android.material.tabs.TabLayout>
