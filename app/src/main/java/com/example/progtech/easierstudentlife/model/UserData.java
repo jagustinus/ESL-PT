@@ -1,4 +1,4 @@
-package com.example.progtech.easierstudentlife;
+package com.example.progtech.easierstudentlife.model;
 
 public class UserData {
     public String ifullName, iEmail, iUniv;
