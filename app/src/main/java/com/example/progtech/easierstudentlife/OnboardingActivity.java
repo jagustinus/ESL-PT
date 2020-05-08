@@ -12,7 +12,7 @@ public class OnboardingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        Intent i = new Intent(OnboardingActivity.this, HomeActivity.class);
+        Intent i = new Intent(OnboardingActivity.this, LoginActivity.class);
         startActivity(i);
         finish();
     }
