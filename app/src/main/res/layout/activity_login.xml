@@ -15,7 +15,7 @@
         android:textColor="#f0f0f0"
         android:textSize="18sp"
         android:fontFamily="sans-serif-light"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -68,8 +68,9 @@
             android:layout_centerHorizontal="true"
             android:importantForAutofill="no" />
 
-        <TextView
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:id="@+id/btn_forgetPsw"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -85,14 +86,13 @@
             android:textAllCaps="false"
             android:textColor="#f0f0f0"
             android:textSize="16sp"
-            android:clickable="true"
-            android:onClick="forgetPsw"
             android:fontFamily="sans-serif-light"
-            android:focusable="true" />
+            android:focusable="true"/>
 
         <Button
             android:id="@+id/btn_login"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/Widget.App.Button"
+            app:backgroundTint="#6369FF"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_forgetPsw"
@@ -104,8 +104,7 @@
             android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="18sp"
-            app:cornerRadius="15dp" />
+            android:textSize="18sp"/>
 
     </RelativeLayout>
 
@@ -127,7 +126,11 @@
 
         <Button
             android:id="@+id/registerBtn"
-            style="@style/Widget.AppCompat.Button"
+            style="@style/Widget.App.Button.OutlinedButton"
+            app:strokeColor="#6369FF"
+            app:strokeWidth="2dp"
+            app:elevation="5dp"
+            app:rippleColor="#f0f0f0"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_regText"
@@ -135,13 +138,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/btn_loginregister_border"
-            android:backgroundTintMode="screen"
             android:fontFamily="sans-serif"
             android:text="@string/register"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="18sp"
-            app:iconTint="#FFFFFF" />
+            android:textSize="18sp"/>
 
     </RelativeLayout>
 
