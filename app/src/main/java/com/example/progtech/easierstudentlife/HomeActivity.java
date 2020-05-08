@@ -11,6 +11,7 @@ import com.example.progtech.easierstudentlife.fragment.HomeFragment;
 import com.example.progtech.easierstudentlife.fragment.ProfileFragment;
 import com.example.progtech.easierstudentlife.fragment.SettingFragment;
 import com.example.progtech.easierstudentlife.fragment.SubjectFragment;
+import com.example.progtech.easierstudentlife.model.UserData;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,6 +21,7 @@ import nl.joery.animatedbottombar.AnimatedBottomBar;
 public class HomeActivity extends AppCompatActivity {
 
     AnimatedBottomBar bottomBar;
+    UserData user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.mi_profile:
-                        ProfileFragment profileFragment = new ProfileFragment();
+                        ProfileFragment profileFragment = new ProfileFragment(user);
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_fragment_container, profileFragment);
                         fragmentTransaction.commit();
@@ -78,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.mi_profile:
-                        ProfileFragment profileFragment = new ProfileFragment();
+                        ProfileFragment profileFragment = new ProfileFragment(user);
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_fragment_container, profileFragment);
                         fragmentTransaction.commit();

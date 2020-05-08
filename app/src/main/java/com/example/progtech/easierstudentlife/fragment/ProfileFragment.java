@@ -9,14 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.progtech.easierstudentlife.R;
+import com.example.progtech.easierstudentlife.model.UserData;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
 
-    public ProfileFragment() {
-        // Required empty public constructor
+    UserData userData;
+    public ProfileFragment(UserData user) {
+        userData = user;
     }
 
 
@@ -25,6 +27,8 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        //coding ndek sini
 
         return view;
     }
