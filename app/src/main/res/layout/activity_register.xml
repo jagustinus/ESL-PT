@@ -35,27 +35,28 @@
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:id="@+id/rl_reg">
 
-        <!--        <EditText-->
-        <!--            android:drawableLeft="@drawable/ic_user"-->
-        <!--            android:drawablePadding="15dp"-->
-        <!--            android:id="@+id/et_nameReg"-->
-        <!--            android:hint="Nama Lengkap"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:padding="5dp"-->
-        <!--            android:paddingStart="16dp"-->
-        <!--            android:textSize="18sp"-->
-        <!--            android:background="@drawable/textfield_background"-->
-        <!--            android:layout_width="350dp"-->
-        <!--            android:layout_height="60dp"-->
-        <!--            android:layout_centerHorizontal="true"/>-->
+        <EditText
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="15dp"
+            android:id="@+id/et_nameReg"
+            android:hint="Nama Lengkap"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:paddingStart="16dp"
+            android:textSize="18sp"
+            android:background="@drawable/textfield_background"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
 
             android:drawableLeft="@drawable/ic_at"
             android:drawablePadding="15dp"
             android:id="@+id/et_emailReg"
+            android:layout_below="@id/et_nameReg"
             android:hint="Email"
             android:layout_marginTop="10dp"
             android:padding="5dp"
@@ -66,27 +67,27 @@
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"/>
 
-        <!--        <EditText-->
-        <!--            android:drawableLeft="@drawable/ic_student"-->
-        <!--            android:drawablePadding="15dp"-->
-        <!--            android:id="@+id/et_univReg"-->
-        <!--            android:hint="Universitas"-->
-        <!--            android:layout_below="@id/et_emailReg"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:padding="5dp"-->
-        <!--            android:paddingStart="16dp"-->
-        <!--            android:textSize="18sp"-->
-        <!--            android:background="@drawable/textfield_background"-->
-        <!--            android:layout_width="350dp"-->
-        <!--            android:layout_height="60dp"-->
-        <!--            android:layout_centerHorizontal="true"/>-->
+        <EditText
+            android:drawableLeft="@drawable/ic_student"
+            android:drawablePadding="15dp"
+            android:id="@+id/et_univReg"
+            android:hint="Universitas"
+            android:layout_below="@id/et_emailReg"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:paddingStart="16dp"
+            android:textSize="18sp"
+            android:background="@drawable/textfield_background"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
             android:drawableLeft="@drawable/ic_lock"
             android:drawablePadding="15dp"
             android:inputType="textPassword"
             android:id="@+id/et_passwordReg"
-            android:layout_below="@+id/et_emailReg"
+            android:layout_below="@+id/et_univReg"
             android:hint="Password"
             android:layout_marginTop="10dp"
             android:padding="5dp"
@@ -97,27 +98,27 @@
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"/>
 
-        <!--        <EditText-->
-        <!--            android:drawableLeft="@drawable/ic_lock"-->
-        <!--            android:drawablePadding="15dp"-->
-        <!--            android:inputType="textPassword"-->
-        <!--            android:id="@+id/et_password2Reg"-->
-        <!--            android:layout_below="@+id/et_passwordReg"-->
-        <!--            android:hint="Retype Password"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:padding="5dp"-->
-        <!--            android:paddingStart="16dp"-->
-        <!--            android:textSize="18sp"-->
-        <!--            android:background="@drawable/textfield_background"-->
-        <!--            android:layout_width="350dp"-->
-        <!--            android:layout_height="60dp"-->
-        <!--            android:layout_centerHorizontal="true"/>-->
+        <EditText
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="15dp"
+            android:inputType="textPassword"
+            android:id="@+id/et_password2Reg"
+            android:layout_below="@+id/et_passwordReg"
+            android:hint="Retype Password"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:paddingStart="16dp"
+            android:textSize="18sp"
+            android:background="@drawable/textfield_background"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"/>
 
         <CheckBox
             android:id="@+id/cb_userAgreeReg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_passwordReg"
+            android:layout_below="@id/et_password2Reg"
             android:buttonTint="#f0f0f0"
             android:layout_marginTop="5dp"
             android:layout_marginStart="65dp"
@@ -146,40 +147,34 @@
 
     </RelativeLayout>
 
+    <ProgressBar
+        android:id="@+id/pb_reg"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_reg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
-
-        <TextView
-            android:id="@+id/tv_regText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sudah punya akun! Langsung masuk."
-            android:textColor="#f0f0f0"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-light"
-            android:layout_centerHorizontal="true"/>
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/loginBtn"
-            style="@style/Widget.App.Button.OutlinedButton"
-            app:strokeColor="#6369FF"
-            app:strokeWidth="2dp"
-            app:elevation="5dp"
-            app:rippleColor="#f0f0f0"
-            android:layout_width="350dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_regText"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="25dp"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif"
-            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/btn_loginregister_border"
-            android:text="Login"
+            android:fontFamily="sans-serif-light"
+            android:text="Sudah punya akun! Langsung masuk."
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="italic"
             android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
