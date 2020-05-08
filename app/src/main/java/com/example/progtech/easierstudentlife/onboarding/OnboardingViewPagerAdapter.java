@@ -1,4 +1,4 @@
-package id.co.jeteas.easierstudentlife.onboarding;
+package com.example.progtech.easierstudentlife.onboarding;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,13 +12,13 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
-import id.co.jeteas.easierstudentlife.R;
+import com.example.progtech.easierstudentlife.R;
 
 public class OnboardingViewPagerAdapter extends PagerAdapter {
     Context mContext;
-    List<OnboardingItemScreen> mScreenItems;
+    List<id.co.jeteas.easierstudentlife.onboarding.OnboardingItemScreen> mScreenItems;
 
-    public OnboardingViewPagerAdapter(Context mContext, List<OnboardingItemScreen> mScreenItems) {
+    public OnboardingViewPagerAdapter(Context mContext, List<id.co.jeteas.easierstudentlife.onboarding.OnboardingItemScreen> mScreenItems) {
         this.mContext = mContext;
         this.mScreenItems = mScreenItems;
     }
