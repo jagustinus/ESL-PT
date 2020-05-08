@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "434111890427",
+    "firebase_url": "https://progtech---esl.firebaseio.com",
+    "project_id": "progtech---esl",
+    "storage_bucket": "progtech---esl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434111890427:android:8a7461d13fcaf9e7fbc15e",
+        "android_client_info": {
+          "package_name": "com.example.progtech.easierstudentlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434111890427-2hr00m1acuobodnpqr07e96ncoafkon6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.progtech.easierstudentlife",
+            "certificate_hash": "6d62daa3d6bb92236be5163f0a96a46fa011b7a8"
+          }
+        },
+        {
+          "client_id": "434111890427-4513h5ibeoienrl77a3g219mmpdfjk7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY7CZZRIjWI__mWK9HJeE_Zuz10vOa_po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434111890427-4513h5ibeoienrl77a3g219mmpdfjk7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
