@@ -8,4 +8,7 @@
     <string name="saya_setuju_dengan_syarat_ketentuan_yang_berlaku"><![CDATA[Saya setuju dengan syarat & ketentuan yang berlaku.]]></string>
     <string name="lupa_password">Lupa password?</string>
     <string name="password">Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
