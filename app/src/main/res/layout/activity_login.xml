@@ -31,6 +31,7 @@
         android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
+        android:id="@+id/rl_log"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -107,6 +108,17 @@
             android:textSize="18sp"/>
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_login"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
