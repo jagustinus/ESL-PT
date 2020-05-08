@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.progtech.easierstudentlife.R;
 import com.example.progtech.easierstudentlife.model.UserData;
+import com.google.android.material.textview.MaterialTextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,7 +29,8 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        //coding ndek sini
+        MaterialTextView toolbar_title = getActivity().findViewById(R.id.toolBar_title);
+        toolbar_title.setText("Profile");
 
         return view;
     }

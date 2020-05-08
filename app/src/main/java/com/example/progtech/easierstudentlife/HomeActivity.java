@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.progtech.easierstudentlife.fragment.HomeFragment;
@@ -12,6 +13,7 @@ import com.example.progtech.easierstudentlife.fragment.ProfileFragment;
 import com.example.progtech.easierstudentlife.fragment.SettingFragment;
 import com.example.progtech.easierstudentlife.fragment.SubjectFragment;
 import com.example.progtech.easierstudentlife.model.UserData;
+import com.google.android.material.textview.MaterialTextView;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -22,11 +24,24 @@ public class HomeActivity extends AppCompatActivity {
 
     AnimatedBottomBar bottomBar;
     UserData user;
+    MaterialTextView toolbar_title;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        toolbar = findViewById(R.id.toolBar);
+        toolbar_title = findViewById(R.id.toolBar_title);
+
+        if(toolbar_title!=null && toolbar!=null) {
+            Toast.makeText(HomeActivity.this,"not null",Toast.LENGTH_LONG).show();
+
+            toolbar.setTitle("");
+            toolbar_title.setText(getTitle());
+            setSupportActionBar(toolbar);
+        }
 
         bottomBar = findViewById(R.id.bottom_nav);
 
