@@ -63,6 +63,7 @@ public class HomeFragment extends Fragment {
         schedule.setEndTime(new Time(13,30)); // sets the end of class time (hour,minute)
         schedules.add(schedule);
 
+        timetableView.setHeaderHighlight(1);
         timetableView.add(schedules);
 
 
