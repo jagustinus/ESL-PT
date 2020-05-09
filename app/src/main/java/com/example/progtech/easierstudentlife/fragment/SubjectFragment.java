@@ -54,6 +54,8 @@ public class SubjectFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        matkulAdapter = new MatkulAdapter(getActivity(),m);
+        recyclerView.setAdapter(matkulAdapter);
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child("dataMatkul");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -62,8 +64,8 @@ public class SubjectFragment extends Fragment {
                     MatkulData matkulData = dataSnapshot1.getValue(MatkulData.class);
                     m.add(matkulData);
                 }
-                matkulAdapter = new MatkulAdapter(getActivity(),m);
-                recyclerView.setAdapter(matkulAdapter);
+
+
             }
 
             @Override
