@@ -33,6 +33,8 @@
         app:cell_height="75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:side_cell_width="50dp"
+        app:header_highlight_type="color"
         app:row_count="25"
         app:header_title="@array/timetable_header_text" />
 

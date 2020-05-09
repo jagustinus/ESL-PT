@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.progtech.easierstudentlife.AddScheduleActivity;
+import com.example.progtech.easierstudentlife.GettingStartedActivity;
 import com.example.progtech.easierstudentlife.R;
 import com.github.tlaabs.timetableview.Schedule;
 import com.github.tlaabs.timetableview.Time;
@@ -47,7 +48,8 @@ public class HomeFragment extends Fragment {
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), AddScheduleActivity.class);
+//                Intent i = new Intent(getActivity(), AddScheduleActivity.class);
+                Intent i = new Intent(getActivity(), GettingStartedActivity.class);
                 startActivity(i);
             }
         });
@@ -63,6 +65,7 @@ public class HomeFragment extends Fragment {
         schedule.setEndTime(new Time(13,30)); // sets the end of class time (hour,minute)
         schedules.add(schedule);
 
+        timetableView.setHeaderHighlight(1);
         timetableView.add(schedules);
 
 
