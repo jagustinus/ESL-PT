@@ -90,6 +90,7 @@ public class AddScheduleActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.save_btn_toolbar) {
             Toast.makeText(this,"Clicked",Toast.LENGTH_LONG).show();
+            finish();
             return true;
         }
 
