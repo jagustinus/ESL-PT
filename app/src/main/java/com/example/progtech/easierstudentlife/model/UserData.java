@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class UserData implements Parcelable {
-    public String ifullName, iEmail, iUniv;
+    public String ifullName, iEmail, iUniv, iMajor;
 
     public UserData() {
     }
@@ -15,9 +15,11 @@ public class UserData implements Parcelable {
         this.iUniv = iUniv;
     }
 
+
     protected UserData(Parcel in) {
         ifullName = in.readString();
         iEmail = in.readString();
+        iUniv = in.readString();
         iUniv = in.readString();
     }
 
@@ -43,6 +45,7 @@ public class UserData implements Parcelable {
         dest.writeString(ifullName);
         dest.writeString(iEmail);
         dest.writeString(iUniv);
+        dest.writeString(iMajor);
     }
 
     public String getIfullName() {
@@ -67,5 +70,13 @@ public class UserData implements Parcelable {
 
     public void setiUniv(String iUniv) {
         this.iUniv = iUniv;
+    }
+
+    public String getiMajor() {
+        return iMajor;
+    }
+
+    public void setiMajor(String iUniv) {
+        this.iMajor = iMajor;
     }
 }
