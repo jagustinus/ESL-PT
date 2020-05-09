@@ -1,5 +1,6 @@
 package com.example.progtech.easierstudentlife.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.Toolbar;
@@ -10,13 +11,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.progtech.easierstudentlife.AddScheduleActivity;
 import com.example.progtech.easierstudentlife.R;
 import com.github.tlaabs.timetableview.Schedule;
 import com.github.tlaabs.timetableview.Time;
 import com.github.tlaabs.timetableview.TimetableView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,9 +39,20 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         MaterialTextView toolbar_title = getActivity().findViewById(R.id.toolBar_title);
-        toolbar_title.setText("Test");
+        toolbar_title.setText("Easier Student Life");
 
         TimetableView timetableView = view.findViewById(R.id.timetable);
+        FloatingActionButton fabAdd = view.findViewById(R.id.home_fab_add_btn);
+
+        fabAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), AddScheduleActivity.class);
+                startActivity(i);
+            }
+        });
+
+
 
         ArrayList<Schedule> schedules = new ArrayList<Schedule>();
         Schedule schedule = new Schedule();

@@ -36,8 +36,6 @@ public class HomeActivity extends AppCompatActivity {
         toolbar_title = findViewById(R.id.toolBar_title);
 
         if(toolbar_title!=null && toolbar!=null) {
-            Toast.makeText(HomeActivity.this,"not null",Toast.LENGTH_LONG).show();
-
             toolbar.setTitle("");
             toolbar_title.setText(getTitle());
             setSupportActionBar(toolbar);

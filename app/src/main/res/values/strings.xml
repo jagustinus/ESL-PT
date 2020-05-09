@@ -15,12 +15,18 @@
 
     <string-array name="timetable_header_text">
         <item></item>
-        <item>Sen</item>
-        <item>Sel</item>
-        <item>Rab</item>
-        <item>Kam</item>
-        <item>Jum</item>
-        <item>Sab</item>
-        <item>Min</item>
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+        <item>Minggu</item>
+    </string-array>
+
+    <string-array name="spinner_tipe_aktifitas">
+        <item></item>
+        <item>Aktifitas Matkul</item>
+        <item>Aktifitas Lain</item>
     </string-array>
 </resources>

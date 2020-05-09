@@ -45,6 +45,7 @@ dependencies {
 
     implementation 'nl.joery.animatedbottombar:library:1.0.8'
     implementation 'com.github.tlaabs:TimetableView:1.0.3-fx1'
+    implementation 'com.github.clans:fab:1.6.2'
 
 
 }
