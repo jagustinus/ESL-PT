@@ -15,4 +15,25 @@
     <string name="jurusan">Jurusan</string>
     <string name="universitas">Universitas</string>
     <string name="analytics">Analytics</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="timetable_header_text">
+        <item></item>
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+        <item>Minggu</item>
+    </string-array>
+
+    <string-array name="spinner_tipe_aktifitas">
+        <item></item>
+        <item>Aktifitas Matkul</item>
+        <item>Aktifitas Lain</item>
+    </string-array>
 </resources>

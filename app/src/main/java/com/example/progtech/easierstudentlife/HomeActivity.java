@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.mi_profile:
-                        ProfileFragment profileFragment = new ProfileFragment(user);
+                        ProfileFragment profileFragment = new ProfileFragment();
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_fragment_container, profileFragment);
                         fragmentTransaction.commit();
@@ -93,7 +93,7 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                         break;
                     case R.id.mi_profile:
-                        ProfileFragment profileFragment = new ProfileFragment(user);
+                        ProfileFragment profileFragment = new ProfileFragment();
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_fragment_container, profileFragment);
                         fragmentTransaction.commit();
