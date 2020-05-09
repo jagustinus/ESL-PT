@@ -123,9 +123,6 @@ public class RegisterActivity extends AppCompatActivity {
 //                                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                                         }
                                     });
-
-
-
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(RegisterActivity.this, "Authentication failed.",
@@ -135,8 +132,6 @@ public class RegisterActivity extends AppCompatActivity {
                         });
             }
         });
-
-
 
         mLogin = findViewById(R.id.loginBtn);
         mLogin.setOnClickListener(new View.OnClickListener() {
