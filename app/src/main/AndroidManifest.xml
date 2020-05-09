@@ -18,7 +18,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".GettingStartedActivity"></activity>
         <activity android:name=".AddScheduleActivity" />
-        <activity android:name=".MataKuliahActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".OnboardingActivity">
             <intent-filter>
