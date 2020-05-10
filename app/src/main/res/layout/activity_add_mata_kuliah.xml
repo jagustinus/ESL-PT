@@ -34,7 +34,8 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Artificial Intelligence"
+        android:hint="Artificial Intelligence"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namaMatkulTxtView" />
@@ -52,13 +53,14 @@
 
     <EditText
         android:id="@+id/sksEditTxt"
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="21"
         android:inputType="textPersonName"
-        android:text="21"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sksTxtView" />
 
@@ -75,15 +77,14 @@
 
     <EditText
         android:id="@+id/ruangEditTxt"
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="A705"
         android:inputType="textPersonName"
-        android:text="A705"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/sksEditTxt"
         app:layout_constraintTop_toBottomOf="@+id/ruangTxtView" />
 
@@ -100,13 +101,14 @@
 
     <EditText
         android:id="@+id/hariEditTxt"
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Senin"
         android:inputType="textPersonName"
-        android:text="Senin"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hariTxtView" />
 
@@ -114,21 +116,23 @@
         android:id="@+id/jamTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Jam"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/ruangEditTxt"
-        tools:layout_editor_absoluteX="212dp" />
+        app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
+        app:layout_constraintTop_toBottomOf="@+id/ruangEditTxt" />
 
     <EditText
         android:id="@+id/jamStartEditTxt"
-        android:layout_width="70dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="07:00"
         android:inputType="textPersonName"
-        android:text="07:00"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
         app:layout_constraintTop_toBottomOf="@+id/jamTxtView" />
 
@@ -145,13 +149,14 @@
 
     <EditText
         android:id="@+id/jamEndEditTxt"
-        android:layout_width="70dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="10:00"
         android:inputType="textPersonName"
-        android:text="10:00"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/jamTxtView" />
 
