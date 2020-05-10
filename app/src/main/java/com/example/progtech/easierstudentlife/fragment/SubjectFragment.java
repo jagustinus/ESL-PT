@@ -1,6 +1,7 @@
 package com.example.progtech.easierstudentlife.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,14 +14,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.progtech.easierstudentlife.AddMataKuliahActivity;
 import com.example.progtech.easierstudentlife.R;
 import com.example.progtech.easierstudentlife.adapter.MatkulAdapter;
 import com.example.progtech.easierstudentlife.holder.MatkulHolder;
 import com.example.progtech.easierstudentlife.model.MatkulData;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,6 +43,7 @@ public class SubjectFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<MatkulData> m = new ArrayList<>();
     MatkulAdapter matkulAdapter;
+    FloatingActionButton btn;
 
     public SubjectFragment() {
         // Required empty public constructor
@@ -74,6 +79,13 @@ public class SubjectFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getActivity(), "Something's wrong", Toast.LENGTH_LONG).show();
+            }
+        });
+        btn = (FloatingActionButton) view.findViewById(R.id.addMatkulBtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AddMataKuliahActivity.class));
             }
         });
 
