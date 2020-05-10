@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GettingStartedActivity"></activity>
+        <activity android:name=".AddMataKuliahActivity"></activity>
+        <activity android:name=".GettingStartedActivity" />
         <activity android:name=".AddScheduleActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".OnboardingActivity">

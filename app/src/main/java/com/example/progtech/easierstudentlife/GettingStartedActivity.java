@@ -44,7 +44,8 @@ public class GettingStartedActivity extends AppCompatActivity {
     String semester, start, end;
 
     TextInputEditText textInputEditTextStart, textInputEditTextEnd;
-    private DatabaseReference databaseReference;private FirebaseAuth firebaseAuth;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
 

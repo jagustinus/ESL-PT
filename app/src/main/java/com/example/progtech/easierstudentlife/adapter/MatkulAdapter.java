@@ -28,7 +28,7 @@ public class MatkulAdapter extends RecyclerView.Adapter<MatkulHolder> {
     @Override
     public MatkulHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mata_kuliah_cardview,null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mata_kuliah_cardview,parent, false);
         return new MatkulHolder(view);
     }
 

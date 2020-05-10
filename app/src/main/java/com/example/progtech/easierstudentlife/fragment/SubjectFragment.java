@@ -1,5 +1,6 @@
 package com.example.progtech.easierstudentlife.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.progtech.easierstudentlife.R;
 import com.example.progtech.easierstudentlife.adapter.MatkulAdapter;
@@ -54,6 +56,7 @@ public class SubjectFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         matkulAdapter = new MatkulAdapter(getActivity(),m);
         recyclerView.setAdapter(matkulAdapter);
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child("dataMatkul");
@@ -70,7 +73,7 @@ public class SubjectFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getActivity(), "Something's wrong", Toast.LENGTH_LONG).show();
             }
         });
 
