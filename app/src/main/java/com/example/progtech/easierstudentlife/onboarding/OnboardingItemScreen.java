@@ -1,4 +1,4 @@
-package id.co.jeteas.easierstudentlife.onboarding;
+package com.example.progtech.easierstudentlife.onboarding;
 
 public class OnboardingItemScreen {
 

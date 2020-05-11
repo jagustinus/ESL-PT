@@ -6,6 +6,15 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 
 import com.google.android.material.textview.MaterialTextView;
+import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver;
+import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager;
+import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar;
+import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter;
+import com.michalsvec.singlerowcalendar.selection.CalendarSelectionManager;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Date;
 
 public class CalendarEventActivity extends AppCompatActivity {
 
@@ -26,6 +35,7 @@ public class CalendarEventActivity extends AppCompatActivity {
             toolbar_title.setText("Calendar View");
             setSupportActionBar(toolbar);
         }
+
 
     }
 }

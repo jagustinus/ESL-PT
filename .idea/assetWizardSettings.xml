@@ -171,9 +171,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_arrow_drop_down_black_24dp" />
-                            <entry key="sourceFile" value="E:\Univ Ciputra\ProgTech\icons\calendar.svg" />
+                            <entry key="outputName" value="ic_undraw_push_notifications_im0o" />
+                            <entry key="sourceFile" value="E:\Univ Ciputra\ProgTech\icons\undraw_push_notifications_im0o.svg" />
                           </map>
                         </option>
                       </PersistentState>

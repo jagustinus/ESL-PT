@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/onboarding_tab_indicatior"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,11 +30,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/onboarding_btn_get_started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+        android:text="Masuk"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/onboarding_tab_indicatior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:orientation="horizontal"
+        app:tabBackground="@drawable/onboarding_indicator_selector"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/onboarding_btn_next"
         app:layout_constraintEnd_toEndOf="parent"

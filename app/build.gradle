@@ -55,6 +55,9 @@ dependencies {
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.github.tlaabs:TimetableView:1.0.3-fx1'
 
+    implementation 'com.github.dewinjm:monthyear-picker:1.0.1'
+    implementation 'com.google.android:flexbox:2.0.1'
+
     implementation 'com.michalsvec:single-row-calednar:1.0.0'
 
 }

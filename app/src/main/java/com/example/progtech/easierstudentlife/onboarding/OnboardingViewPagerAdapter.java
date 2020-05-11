@@ -16,9 +16,9 @@ import com.example.progtech.easierstudentlife.R;
 
 public class OnboardingViewPagerAdapter extends PagerAdapter {
     Context mContext;
-    List<id.co.jeteas.easierstudentlife.onboarding.OnboardingItemScreen> mScreenItems;
+    List<OnboardingItemScreen> mScreenItems;
 
-    public OnboardingViewPagerAdapter(Context mContext, List<id.co.jeteas.easierstudentlife.onboarding.OnboardingItemScreen> mScreenItems) {
+    public OnboardingViewPagerAdapter(Context mContext, List<OnboardingItemScreen> mScreenItems) {
         this.mContext = mContext;
         this.mScreenItems = mScreenItems;
     }

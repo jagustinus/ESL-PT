@@ -161,7 +161,7 @@ public class HomeFragment extends Fragment {
         dayOfWeek = c.get(Calendar.DAY_OF_WEEK); // this will for example return 3 for tuesday
     }
 
-    private void showSchedule(Date date) {
+    private void showSchedule(final Date date) {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -169,10 +169,6 @@ public class HomeFragment extends Fragment {
         // Get "User UID" from Firebase > Authentification > Users.
         FirebaseUser user = firebaseAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child(user.getUid()).child("dataMatkul");
-
-        Calendar calendar = Calendar.getInstance();
-        final Date today = calendar.getTime();
-
 
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_event_home);
         recyclerView.setHasFixedSize(true);
@@ -193,12 +189,13 @@ public class HomeFragment extends Fragment {
                         MatkulData s = snapshot.getValue(MatkulData.class);
 
                         SimpleDateFormat outFormat = new SimpleDateFormat("EEEE");
-                        String todayName = outFormat.format(today);
+                        String todayName = outFormat.format(date);
                         if(s.getDay().equalsIgnoreCase(todayName)){
                             m.add(s);
                             Toast.makeText(getActivity(), s.getDay(), Toast.LENGTH_LONG).show();
                         }
                         matkulAdapter.notifyDataSetChanged();
+                        Toast.makeText(getActivity(), String.valueOf(matkulAdapter.getItemCount()), Toast.LENGTH_LONG);
 
                     }
                 }
