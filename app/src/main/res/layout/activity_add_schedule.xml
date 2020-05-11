@@ -31,19 +31,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Gender"
+                android:text="Jenis Aktifitas"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
-                android:id="@+id/addSchecule_spinner_type"
+                android:id="@+id/addSchedule_spinner_type"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 style="@style/Widget.AppCompat.Spinner.DropDown"
                 android:background="@drawable/edit_text_custom"
                 android:ems="10"
@@ -52,16 +50,122 @@
                 app:layout_constraintStart_toStartOf="@+id/fragment_register_tv_gender"
                 app:layout_constraintTop_toBottomOf="@+id/fragment_register_tv_gender" />
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:id="@+id/textInputLayout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addSchedule_til_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_spinner_type"
+                app:endIconDrawable="@drawable/ic_date_range_black_24dp"
+                app:endIconMode="custom"
+                tools:layout_editor_absoluteX="16dp">
 
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint=""-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addSchedule_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tanggal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addSchedule_til_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_til_date"
+                tools:layout_editor_absoluteX="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addSchedule_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jam"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/addSchedule_tv_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifikasi"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/addSchedule_til_time"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_til_time" />
+
+            <Spinner
+                android:id="@+id/addSchedule_spinner_notif"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:background="@drawable/edit_text_custom"
+                android:ems="10"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/addSchedule_tv_notif"
+                app:layout_constraintStart_toStartOf="@+id/addSchedule_tv_notif"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_tv_notif" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addSchedule_til_judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_spinner_notif"
+                tools:layout_editor_absoluteX="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addSchedule_judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Judul"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/addSchedule_matkul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata Kuliah"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/addSchedule_til_judul"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_til_judul" />
+
+            <Spinner
+                android:id="@+id/addSchedule_spinner_matkul"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:background="@drawable/edit_text_custom"
+                android:ems="10"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/addSchedule_matkul"
+                app:layout_constraintStart_toStartOf="@+id/addSchedule_matkul"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_matkul" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addSchedule_til_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/addSchedule_spinner_matkul"
+                tools:layout_editor_absoluteX="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addSchedule_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Deskriptsi"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

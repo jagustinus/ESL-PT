@@ -40,6 +40,8 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".RegisterActivity" />
+        
+        <receiver android:name=".reminder.ReminderBroadcast"/>
     </application>
 
 </manifest>
