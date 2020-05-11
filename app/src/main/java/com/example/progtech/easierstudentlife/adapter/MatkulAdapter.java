@@ -49,8 +49,4 @@ public class MatkulAdapter extends RecyclerView.Adapter<MatkulHolder> {
         return matkulData.size();
     }
 
-    public void deleteItem(int position){
-
-    }
-
 }
