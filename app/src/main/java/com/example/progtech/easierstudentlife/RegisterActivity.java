@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.progtech.easierstudentlife.model.Todo;
 import com.example.progtech.easierstudentlife.model.UserData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -109,7 +112,8 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-                                    UserData newUser = new UserData(name, email, univ);
+
+                                    UserData newUser = new UserData(name, email, univ, new ArrayList<Todo>());
 
                                     FirebaseDatabase.getInstance().getReference("UserData")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

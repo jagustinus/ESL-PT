@@ -18,6 +18,7 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CalendarEventActivity"></activity>
         <activity android:name=".AddMataKuliahActivity" />
         <activity android:name=".GettingStartedActivity" />
         <activity android:name=".AddScheduleActivity" />

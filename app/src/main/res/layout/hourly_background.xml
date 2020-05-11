@@ -12,6 +12,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="01:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,6 +22,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="02:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -29,6 +31,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="03:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -37,6 +40,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="04:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -45,6 +49,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="05:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -53,6 +58,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="06:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -61,6 +67,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="07:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -69,6 +76,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="01:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -77,6 +85,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="08:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -85,6 +94,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="09:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -93,6 +103,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="10:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -101,6 +112,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="11:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -109,6 +121,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="12:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -117,6 +130,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="13:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -125,6 +139,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="14:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -133,6 +148,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="15:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -141,6 +157,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="16:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -149,6 +166,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="17:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -157,6 +175,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="18:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -165,6 +184,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="19:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -173,6 +193,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="20:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -181,6 +202,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="21:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -189,6 +211,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="22:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -197,6 +220,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="23:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -205,6 +229,7 @@
         android:background="@drawable/hourly_item_background"
         android:gravity="bottom|left"
         android:text="00:00"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

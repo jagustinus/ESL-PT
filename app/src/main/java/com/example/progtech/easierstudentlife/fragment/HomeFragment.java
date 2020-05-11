@@ -5,8 +5,11 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.util.Pair;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -17,13 +20,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.progtech.easierstudentlife.AddScheduleActivity;
+import com.example.progtech.easierstudentlife.CalendarEventActivity;
 import com.example.progtech.easierstudentlife.GettingStartedActivity;
 import com.example.progtech.easierstudentlife.LoginActivity;
 import com.example.progtech.easierstudentlife.R;
+import com.example.progtech.easierstudentlife.adapter.MatkulAdapter;
 import com.example.progtech.easierstudentlife.model.MatkulData;
 import com.github.tlaabs.timetableview.Schedule;
 import com.github.tlaabs.timetableview.Time;
@@ -71,6 +78,12 @@ public class HomeFragment extends Fragment {
     private String currentDateandTime;
     int dayOfWeek;
 
+    RecyclerView recyclerView;
+    ArrayList<MatkulData> m;
+    MatkulAdapter matkulAdapter;
+
+    View view;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -80,12 +93,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
 
         MaterialTextView toolbar_title = getActivity().findViewById(R.id.toolBar_title);
         toolbar_title.setText("Easier Student Life");
         Toolbar toolbar = getActivity().findViewById(R.id.toolBar);
         setHasOptionsMenu(true);
+
+        recyclerView  = view.findViewById(R.id.rv_event_home);
 
 
         FloatingActionButton fabAdd = view.findViewById(R.id.home_fab_add_btn);
@@ -99,7 +114,7 @@ public class HomeFragment extends Fragment {
         });
 
         setTodayDate();
-//        showSchedule(Calendar.getInstance().getTime());
+        showSchedule(Calendar.getInstance().getTime());
 
 
         MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
@@ -131,7 +146,6 @@ public class HomeFragment extends Fragment {
 
                 materialTextViewDate.setText(simpleFormat.format(date));
                 newDate = simpleFormat.format(date);
-
                 showSchedule(date);
             }
         });
@@ -157,32 +171,35 @@ public class HomeFragment extends Fragment {
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child(user.getUid()).child("dataMatkul");
 
         Calendar calendar = Calendar.getInstance();
-        Date today = calendar.getTime();
-        System.out.println(new SimpleDateFormat("EE", Locale.ENGLISH).format(date.getTime()));
-        System.out.println(new SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime()));
+        final Date today = calendar.getTime();
+
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.rv_event_home);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        m = new ArrayList<>();
+        matkulAdapter = new MatkulAdapter(getActivity(),m);
+        recyclerView.setAdapter(matkulAdapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null){
-                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    m.clear();
+                    matkulAdapter.notifyDataSetChanged();
 
+                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                         MatkulData s = snapshot.getValue(MatkulData.class);
 
+                        SimpleDateFormat outFormat = new SimpleDateFormat("EEEE");
+                        String todayName = outFormat.format(today);
+                        if(s.getDay().equalsIgnoreCase(todayName)){
+                            m.add(s);
+                            Toast.makeText(getActivity(), s.getDay(), Toast.LENGTH_LONG).show();
+                        }
+                        matkulAdapter.notifyDataSetChanged();
 
-
-//                        Log.d("DEBUG: ", dow);
-//                        if(dayToHari(s.day).equalsIgnoreCase(s.day)){
-//                            ArrayList<Schedule> schedules = new ArrayList<Schedule>();
-//                            Schedule schedule = new Schedule();
-//                            schedule.setClassTitle(s.name); // sets subject
-//                            schedule.setClassPlace(s.ruang); // sets place
-//                            schedule.setProfessorName("Won Kim"); // sets professor
-//                            schedule.setStartTime(new Time(10,0)); // sets the beginning of class time (hour,minute)
-//                            schedule.setEndTime(new Time(13,30)); // sets the end of class time (hour,minute)
-//                            schedules.add(schedule);
-//                            ttv.add(schedules);
-//                        }
                     }
                 }
             }
@@ -208,6 +225,8 @@ public class HomeFragment extends Fragment {
         if (id == R.id.save_btn_toolbar) {
             Toast.makeText(getActivity(),"Clicked",Toast.LENGTH_LONG).show();
 
+            Intent intent = new Intent(getActivity(), CalendarEventActivity.class);
+            startActivity(intent);
 
 //            LayoutInflater inflater, ViewGroup container,
 //                    Bundle savedInstanceState
