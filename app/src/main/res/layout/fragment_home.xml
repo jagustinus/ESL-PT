@@ -27,10 +27,8 @@
         android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:paddingBottom="64dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_fragment_date_text">
 
 
@@ -43,6 +41,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </ScrollView>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/home_fab_add_btn"
@@ -60,15 +60,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"/>
 
-<!--&lt;!&ndash;    <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/main_single_row_calendar"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:deselection="false"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:longPress="false"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:multiSelection="false" />&ndash;&gt;-->
+<!--    <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar-->
+<!--        android:id="@+id/main_single_row_calendar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:deselection="false"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:longPress="false"-->
+<!--        app:multiSelection="false" />-->
 <!--    <ScrollView-->
 <!--        android:id="@+id/scrollView2"-->
 <!--        android:layout_width="match_parent"-->
@@ -86,10 +86,33 @@
 <!--            android:paddingHorizontal="16dp">-->
 
 <!--            <include-->
+<!--                android:id="@+id/bg_hourly"-->
 <!--                layout="@layout/hourly_background"-->
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
+
+<!--            <ScrollView-->
+<!--                android:id="@+id/eventParent"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginStart="48dp"-->
+<!--                android:layout_alignTop="@+id/bg_hourly"-->
+<!--                android:paddingBottom="64dp">-->
+
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rv_event_home"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            </ScrollView>-->
 
 <!--        </RelativeLayout>-->
 <!--    </ScrollView>-->

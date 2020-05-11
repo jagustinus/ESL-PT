@@ -48,6 +48,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager;
 
+import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
@@ -83,6 +85,8 @@ public class HomeFragment extends Fragment {
     MatkulAdapter matkulAdapter;
 
     View view;
+
+    ArrayList<MatkulData> allMatkul = new ArrayList<>();
 
     public HomeFragment() {
         // Required empty public constructor
@@ -160,6 +164,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void showSchedule(final Date date) {
+
+        Log.d("DEBUG DATE: ", date.toString());
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -181,16 +188,18 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null){
                     m.clear();
+                    if (!allMatkul.isEmpty())
+                        allMatkul.clear();
                     matkulAdapter.notifyDataSetChanged();
 
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                         MatkulData s = snapshot.getValue(MatkulData.class);
+                        allMatkul.add(s);
 
                         SimpleDateFormat outFormat = new SimpleDateFormat("EEEE");
                         String todayName = outFormat.format(date);
                         if(s.getDay().equalsIgnoreCase(todayName)){
                             m.add(s);
-                            Toast.makeText(getActivity(), s.getDay(), Toast.LENGTH_LONG).show();
                         }
 
                     }
@@ -217,9 +226,13 @@ public class HomeFragment extends Fragment {
         int id = item.getItemId();
 
         if (id == R.id.save_btn_toolbar) {
-            Toast.makeText(getContext(),"Clicked",Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(),String.valueOf(allMatkul.size()),Toast.LENGTH_LONG).show();
+
 
             Intent intent = new Intent(getActivity(), CalendarEventActivity.class);
+            Bundle args = new Bundle();
+            args.putSerializable("MATKULLIST",(Serializable)allMatkul);
+            intent.putExtra("BUNDLE",args);
             startActivity(intent);
 
             return true;

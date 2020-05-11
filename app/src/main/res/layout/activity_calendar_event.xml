@@ -12,6 +12,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.github.tlaabs.timetableview.TimetableView
+        android:id="@+id/timetable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:column_count="7"
+        app:cell_height="60dp"
+        app:start_time="5"
+        app:side_cell_width="20dp"
+        app:header_title="@array/timetable_header_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2"
+        app:row_count="18" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
