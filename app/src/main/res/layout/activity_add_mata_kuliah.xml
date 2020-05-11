@@ -99,16 +99,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sksEditTxt" />
 
-    <EditText
-        android:id="@+id/hariEditTxt"
+    <Spinner
+        android:id="@+id/hariSpinner"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Senin"
-        android:inputType="textPersonName"
-        android:text=""
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtView3" />
 
@@ -120,7 +118,7 @@
         android:layout_marginTop="16dp"
         android:text="Jam"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
+        app:layout_constraintStart_toEndOf="@+id/hariSpinner"
         app:layout_constraintTop_toBottomOf="@+id/txtView" />
 
     <EditText
@@ -133,7 +131,7 @@
         android:hint="07:00"
         android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
+        app:layout_constraintStart_toEndOf="@+id/hariSpinner"
         app:layout_constraintTop_toBottomOf="@+id/txtView4" />
 
     <TextView
@@ -169,5 +167,30 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nama Kelas"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hariSpinner" />
+
+    <EditText
+        android:id="@+id/namaKelasEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Studio Informatika"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
