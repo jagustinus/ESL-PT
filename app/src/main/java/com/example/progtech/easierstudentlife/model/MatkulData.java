@@ -2,12 +2,12 @@ package com.example.progtech.easierstudentlife.model;
 
 public class MatkulData {
     public String day,end,name,start,semester,namaRuang;
-    public int ruang;
+    public String ruang;
 
     public MatkulData() {
     }
 
-    public MatkulData(String day, String end, String name, int ruang, String start,String namaRuang) {
+    public MatkulData(String day, String end, String name, String ruang, String start,String namaRuang) {
         this.day = day;
         this.end = end;
         this.name = name;
@@ -57,11 +57,11 @@ public class MatkulData {
         this.name = name;
     }
 
-    public int getRuang() {
+    public String getRuang() {
         return ruang;
     }
 
-    public void setRuang(int ruang) {
+    public void setRuang(String ruang) {
         this.ruang = ruang;
     }
 

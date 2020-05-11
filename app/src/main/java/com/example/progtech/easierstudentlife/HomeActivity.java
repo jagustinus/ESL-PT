@@ -1,5 +1,6 @@
 package com.example.progtech.easierstudentlife;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import com.example.progtech.easierstudentlife.fragment.SettingFragment;
 import com.example.progtech.easierstudentlife.fragment.SubjectFragment;
 import com.example.progtech.easierstudentlife.model.UserData;
 import com.google.android.material.textview.MaterialTextView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -26,11 +28,17 @@ public class HomeActivity extends AppCompatActivity {
     UserData user;
     MaterialTextView toolbar_title;
     Toolbar toolbar;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        if (firebaseAuth.getCurrentUser() == null){
+            startActivity(new Intent(this, LoginActivity.class));
+        }
 
         toolbar = findViewById(R.id.toolBar);
         toolbar_title = findViewById(R.id.toolBar_title);

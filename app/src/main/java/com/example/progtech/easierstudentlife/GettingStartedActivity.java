@@ -118,11 +118,7 @@ public class GettingStartedActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get Text
-
                 Semester smst = new Semester(semester, start,end);
-
-                // TODO : Send data to firebase
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                 // Get "User UID" from Firebase > Authentification > Users.
                 FirebaseUser user = firebaseAuth.getCurrentUser();

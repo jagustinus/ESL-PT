@@ -20,12 +20,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.progtech.easierstudentlife.AddMataKuliahActivity;
+import com.example.progtech.easierstudentlife.LoginActivity;
 import com.example.progtech.easierstudentlife.R;
 import com.example.progtech.easierstudentlife.adapter.MatkulAdapter;
 import com.example.progtech.easierstudentlife.holder.MatkulHolder;
 import com.example.progtech.easierstudentlife.model.MatkulData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,9 +44,10 @@ public class SubjectFragment extends Fragment {
 
     DatabaseReference databaseReference;
     RecyclerView recyclerView;
-    ArrayList<MatkulData> m = new ArrayList<>();
+    ArrayList<MatkulData> m;
     MatkulAdapter matkulAdapter;
     FloatingActionButton btn;
+    private FirebaseAuth firebaseAuth;
 
     public SubjectFragment() {
         // Required empty public constructor
@@ -62,18 +66,30 @@ public class SubjectFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        m = new ArrayList<>();
         matkulAdapter = new MatkulAdapter(getActivity(),m);
         recyclerView.setAdapter(matkulAdapter);
-        databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child("dataMatkul");
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        if (firebaseAuth.getCurrentUser() == null){
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        }
+
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child(user.getUid()).child("dataMatkul");
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                m.clear();
+                matkulAdapter.notifyDataSetChanged();
+
                 for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
                     MatkulData matkulData = dataSnapshot1.getValue(MatkulData.class);
                     m.add(matkulData);
                 }
 
-
+                matkulAdapter.notifyDataSetChanged();
             }
 
             @Override

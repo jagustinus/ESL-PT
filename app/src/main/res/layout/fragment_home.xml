@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/home_fragment_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sabtu - 05/09/2020"
+        android:padding="4dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:drawableEndCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/home_fab_add_btn"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_add_black_24dp"
@@ -22,19 +37,54 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"/>
 
-
-    <com.github.tlaabs.timetableview.TimetableView
-        android:id="@+id/timetable"
+<!--    <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar-->
+<!--        android:id="@+id/main_single_row_calendar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:deselection="false"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:longPress="false"-->
+<!--        app:multiSelection="false" />-->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:column_count="4"
-        app:start_time="0"
-        app:cell_height="75dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:side_cell_width="50dp"
-        app:header_highlight_type="color"
-        app:row_count="25"
-        app:header_title="@array/timetable_header_text" />
+        app:layout_constraintTop_toBottomOf="@+id/home_fragment_date_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <include
+                layout="@layout/hourly_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
