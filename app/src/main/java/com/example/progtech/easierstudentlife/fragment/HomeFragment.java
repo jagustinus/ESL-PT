@@ -102,20 +102,18 @@ public class HomeFragment extends Fragment {
 
         recyclerView  = view.findViewById(R.id.rv_event_home);
 
-
         FloatingActionButton fabAdd = view.findViewById(R.id.home_fab_add_btn);
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent i = new Intent(getActivity(), AddScheduleActivity.class);
-                Intent i = new Intent(getActivity(), GettingStartedActivity.class);
+                Intent i = new Intent(getContext(), AddScheduleActivity.class);
                 startActivity(i);
             }
         });
 
         setTodayDate();
         showSchedule(Calendar.getInstance().getTime());
-
 
         MaterialDatePicker.Builder<Long> builder = MaterialDatePicker.Builder.datePicker();
         builder.setTitleText("Pilih tanggal");
@@ -170,12 +168,12 @@ public class HomeFragment extends Fragment {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData").child(user.getUid()).child("dataMatkul");
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.rv_event_home);
+        recyclerView = view.findViewById(R.id.rv_event_home);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         m = new ArrayList<>();
-        matkulAdapter = new MatkulAdapter(getActivity(),m);
+        matkulAdapter = new MatkulAdapter(getContext(),m);
         recyclerView.setAdapter(matkulAdapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -194,10 +192,10 @@ public class HomeFragment extends Fragment {
                             m.add(s);
                             Toast.makeText(getActivity(), s.getDay(), Toast.LENGTH_LONG).show();
                         }
-                        matkulAdapter.notifyDataSetChanged();
-                        Toast.makeText(getActivity(), String.valueOf(matkulAdapter.getItemCount()), Toast.LENGTH_LONG);
 
                     }
+                    matkulAdapter.notifyDataSetChanged();
+
                 }
             }
 
@@ -218,15 +216,11 @@ public class HomeFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.save_btn_toolbar) {
-            Toast.makeText(getActivity(),"Clicked",Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(),"Clicked",Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(getActivity(), CalendarEventActivity.class);
             startActivity(intent);
-
-//            LayoutInflater inflater, ViewGroup container,
-//                    Bundle savedInstanceState
 
             return true;
         }
@@ -234,32 +228,5 @@ public class HomeFragment extends Fragment {
 
         return super.onOptionsItemSelected(item);
 
-    }
-
-    private String dayToHari(String dayName){
-        final String MONDAY = "monday";
-        final String TUESDAY = "tuesday";
-        final String WEDNESDAY = "wednesday";
-        final String THURSDAY = "thursday";
-        final String FRIDAY = "friday";
-        final String SATURDAY = "saturday";
-        final String SUNDAY = "sunday";
-
-        if(dayName.equalsIgnoreCase(MONDAY))
-            return "Senin";
-        else if (dayName.equalsIgnoreCase(TUESDAY))
-            return "Selasa";
-        else if (dayName.equalsIgnoreCase(WEDNESDAY))
-            return "Rabu";
-        else if (dayName.equalsIgnoreCase(THURSDAY))
-            return "Kamis";
-        else if (dayName.equalsIgnoreCase(FRIDAY))
-            return "Jumat";
-        else if (dayName.equalsIgnoreCase(SATURDAY))
-            return "Sabtu";
-        else if (dayName.equalsIgnoreCase(SUNDAY))
-            return "Minggu";
-
-        return dayName;
     }
 }

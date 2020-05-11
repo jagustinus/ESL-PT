@@ -1,37 +1,60 @@
 package com.example.progtech.easierstudentlife.model;
 
-public class MatkulData {
-    public String day,end,name,start,semester,namaRuang;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MatkulData implements Parcelable {
+    public String day,end,name,start,namaRuang;
     public String ruang;
+
+    List<Todo> todos;
 
     public MatkulData() {
     }
 
-    public MatkulData(String namaRuang, String name, String day, String end, String ruang,String start) {
+    public MatkulData(String day, String end, String name, String start, String namaRuang, String ruang) {
         this.day = day;
         this.end = end;
         this.name = name;
-        this.ruang = ruang;
         this.start = start;
-        this.semester = semester;
         this.namaRuang = namaRuang;
+        this.ruang = ruang;
+        this.todos = new ArrayList<>();
     }
 
-    public String getNamaRuang() {
-        return namaRuang;
-    }
-
-    public void setNamaRuang(String namaRuang) {
+    public MatkulData(String day, String end, String name, String start, String namaRuang, String ruang, List<Todo> todos) {
+        this.day = day;
+        this.end = end;
+        this.name = name;
+        this.start = start;
         this.namaRuang = namaRuang;
+        this.ruang = ruang;
+        this.todos = todos;
     }
 
-    public String getSemester() {
-        return semester;
+    protected MatkulData(Parcel in) {
+        day = in.readString();
+        end = in.readString();
+        name = in.readString();
+        start = in.readString();
+        namaRuang = in.readString();
+        ruang = in.readString();
     }
 
-    public void setSemester(String semester) {
-        this.semester = semester;
-    }
+    public static final Creator<MatkulData> CREATOR = new Creator<MatkulData>() {
+        @Override
+        public MatkulData createFromParcel(Parcel in) {
+            return new MatkulData(in);
+        }
+
+        @Override
+        public MatkulData[] newArray(int size) {
+            return new MatkulData[size];
+        }
+    };
 
     public String getDay() {
         return day;
@@ -57,6 +80,22 @@ public class MatkulData {
         this.name = name;
     }
 
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public String getNamaRuang() {
+        return namaRuang;
+    }
+
+    public void setNamaRuang(String namaRuang) {
+        this.namaRuang = namaRuang;
+    }
+
     public String getRuang() {
         return ruang;
     }
@@ -65,11 +104,26 @@ public class MatkulData {
         this.ruang = ruang;
     }
 
-    public String getStart() {
-        return start;
+    public List<Todo> getTodos() {
+        return todos;
     }
 
-    public void setStart(String start) {
-        this.start = start;
+    public void setTodos(List<Todo> todos) {
+        this.todos = todos;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(day);
+        dest.writeString(end);
+        dest.writeString(name);
+        dest.writeString(start);
+        dest.writeString(namaRuang);
+        dest.writeString(ruang);
     }
 }

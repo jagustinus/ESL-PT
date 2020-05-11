@@ -66,7 +66,7 @@ public class AddMataKuliahActivity extends AppCompatActivity {
                 String awal = start.getText().toString();
                 String akhir = end.getText().toString();
                 String hari = day.getText().toString();
-                MatkulData matkul = new MatkulData(namaRuang,nama, hari, akhir, room, awal);
+                MatkulData matkul = new MatkulData(hari, akhir, nama, awal, namaRuang, room);
                 if (nama.isEmpty() || room.isEmpty() || awal.isEmpty() || akhir.isEmpty() || hari.isEmpty()) {
                     Toast.makeText(AddMataKuliahActivity.this, "isi data dengan lengkap!", Toast.LENGTH_SHORT).show();
                 } else {
