@@ -7,7 +7,7 @@ public class MatkulData {
     public MatkulData() {
     }
 
-    public MatkulData(String day, String end, String name, String ruang, String start,String namaRuang) {
+    public MatkulData(String namaRuang, String name, String day, String end, String ruang,String start) {
         this.day = day;
         this.end = end;
         this.name = name;

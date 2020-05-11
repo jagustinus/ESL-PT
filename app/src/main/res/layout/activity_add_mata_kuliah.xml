@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/namaMatkulTxtView" />
 
     <TextView
-        android:id="@+id/sksTxtView"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -62,10 +62,10 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sksTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/ruangTxtView"
+        android:id="@+id/txtView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/namaEditTxt" />
 
     <EditText
-        android:id="@+id/ruangEditTxt"
+        android:id="@+id/txtView"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -86,10 +86,10 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/sksEditTxt"
-        app:layout_constraintTop_toBottomOf="@+id/ruangTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView2" />
 
     <TextView
-        android:id="@+id/hariTxtView"
+        android:id="@+id/txtView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -110,10 +110,10 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hariTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView3" />
 
     <TextView
-        android:id="@+id/jamTxtView"
+        android:id="@+id/txtView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -121,7 +121,7 @@
         android:text="Jam"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
-        app:layout_constraintTop_toBottomOf="@+id/ruangEditTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView" />
 
     <EditText
         android:id="@+id/jamStartEditTxt"
@@ -134,7 +134,7 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/hariEditTxt"
-        app:layout_constraintTop_toBottomOf="@+id/jamTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView4" />
 
     <TextView
         android:id="@+id/textView4"
@@ -145,7 +145,7 @@
         android:text="-"
         android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/jamStartEditTxt"
-        app:layout_constraintTop_toBottomOf="@+id/jamTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView4" />
 
     <EditText
         android:id="@+id/jamEndEditTxt"
@@ -158,10 +158,10 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/jamTxtView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView4" />
 
     <Button
-        android:id="@+id/simpanMatkulBtn"
+        android:id="@+id/hapusMatkulBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

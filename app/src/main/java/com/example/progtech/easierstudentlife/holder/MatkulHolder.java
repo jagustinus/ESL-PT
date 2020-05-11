@@ -11,6 +11,7 @@ import com.example.progtech.easierstudentlife.R;
 public class MatkulHolder extends RecyclerView.ViewHolder {
 
     public TextView namaMatkul,dayTime,semester;
+    public View v;
 
     public MatkulHolder(@NonNull View itemView) {
         super(itemView);
@@ -18,6 +19,12 @@ public class MatkulHolder extends RecyclerView.ViewHolder {
         this.namaMatkul = itemView.findViewById(R.id.namaMatkulTxtView);
         this.dayTime = itemView.findViewById(R.id.DayTimeTxtView);
         this.semester = itemView.findViewById(R.id.semesterTxtView);
-
+        v=itemView;
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = getAdapterPosition();
+            }
+        });
     }
 }
